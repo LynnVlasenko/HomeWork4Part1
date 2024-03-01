@@ -9,13 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var greating: UILabel!
+    @IBOutlet weak var greeting: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        greating.text = "Hello!" 
+        greeting.text = "Hello!"
     }
 
 
