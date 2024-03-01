@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     @IBAction func tapMeButtonAction(_ sender: UIButton) {
         if !isTouch {
-            greetingLabel.text = "Welcome to the CHI Academy!👩🏻‍💻"
+            greetingLabel.text = "Welcome to CHI Academy! 👩🏻‍💻"
             greetingLabel.numberOfLines = 3
             isTouch = true
         } else {
