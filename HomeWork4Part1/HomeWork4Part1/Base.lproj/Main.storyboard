@@ -17,25 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi!" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56T-EF-STf">
-                                <rect key="frame" x="96.666666666666686" y="168" width="200" height="35"/>
+                                <rect key="frame" x="76.666666666666686" y="168" width="240" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Hm0-SR-Bdw"/>
+                                    <constraint firstAttribute="width" constant="240" id="Iao-t4-dcA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMC-IJ-Ks8">
+                                <rect key="frame" x="106.66666666666669" y="401" width="180" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="H5v-m7-nVZ" userLabel="width = 180"/>
+                                    <constraint firstAttribute="height" constant="50" id="M0w-HB-OSx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tap me!">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapMeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5q-Mg-vmR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YMC-IJ-Ks8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="57p-oy-5pB"/>
+                            <constraint firstItem="YMC-IJ-Ks8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9z4-r6-z7o"/>
                             <constraint firstItem="56T-EF-STf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cjc-hS-ihQ"/>
-                            <constraint firstItem="56T-EF-STf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="euG-gJ-Pcw"/>
-                            <constraint firstItem="56T-EF-STf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x9g-3K-5aO"/>
+                            <constraint firstItem="56T-EF-STf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="euG-gJ-Pcw" userLabel="Greeting Label.top = Safe Area.top + 100"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greating" destination="56T-EF-STf" id="Yoa-oj-XJG"/>
+                        <outlet property="greetingLabel" destination="56T-EF-STf" id="wkV-0S-Dfn"/>
+                        <outlet property="tapButton" destination="YMC-IJ-Ks8" id="3yA-DH-SMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -46,6 +63,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
